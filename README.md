@@ -139,8 +139,8 @@ git submodule update --init
 git submodule foreach -q 'git checkout $(git config -f $toplevel/.gitmodules submodule.$name.branch || echo master)'
 
 cmake . && make
-# make install
-# /bin/cp -rfa src/ssr-* /usr/bin
+make install
+/bin/cp -rfa src/ssr-* /usr/bin
 ```
 
 The target binaries are `ssr-n/src/ssr-server`, `ssr-n/src/ssr-client` and `ssr-n/src/ssr-local`.
